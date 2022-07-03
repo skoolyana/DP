@@ -4,6 +4,8 @@ import java.util.Arrays;
 
 // https://www.youtube.com/watch?v=EgG3jsGoPvQ&list=PLgUwDviBIf0qUlt5H_kiKYaNSqJ81PMMY&index=4
 
+// https://takeuforward.org/data-structure/dynamic-programming-frog-jump-dp-3/
+
 
 
 public class FrogJump_Striver {
@@ -14,7 +16,7 @@ public class FrogJump_Striver {
 	
 		System.out.println(getMainFrog(6,jumps));
 	
-	
+		
 	}
 	
 	public static int getMainFrog(int stair, int[] jumps)

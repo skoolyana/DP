@@ -4,6 +4,8 @@ import java.util.Arrays;
 
 // https://www.youtube.com/watch?v=Kmh3rhyEtB8&list=PLgUwDviBIf0qUlt5H_kiKYaNSqJ81PMMY&index=5
 
+// https://takeuforward.org/data-structure/dynamic-programming-frog-jump-with-k-distances-dp-4/
+
 
 
 public class K_FrogJump_Striver {

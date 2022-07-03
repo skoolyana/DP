@@ -36,9 +36,58 @@ public class HouseRobber2 {
 		
 		System.out.println(Math.max(lastRemove, firstRemove));
 		
+		int[] nums = {1,2,3,1};
+		
+		System.out.println(robbing(nums));
+		
 		
 	}
 	
+	
+	
+	private static int robbing(int[] nums) {
+		
+		
+		return recurse(nums.length-1,nums,0);
+		
+	}
+
+	
+	int max = 0;
+	
+	
+      private static int recurse(int index, int[] nums,boolean robbed) {
+
+    	  
+    	  if(index<0)
+    		  return 0;
+    	  
+    	  
+    	  
+    	  
+    	    int rob = nums[index];
+    	  
+    		int notRob = 0;
+    	    
+    	  	if(index-2>=0)
+    	  	{
+    	  		rob+=recurse(index-2, nums);
+    	  	}
+    	  
+    	  	if(index-1>=0)
+    	  	{
+    	  		notRob  = recurse(index-1,nums);
+    	  	}
+    	  	
+    	  
+    	  // TODO Auto-generated method stub
+		return Math.max(rob, notRob);
+	}
+
+
+      
+      
+
 private static int recursespaceoptimise(ArrayList<Integer> nums) {
 		
 	

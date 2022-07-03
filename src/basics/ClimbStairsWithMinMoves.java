@@ -40,8 +40,57 @@ public class ClimbStairsWithMinMoves {
 		}
 		
 		 System.out.println(dp[0]);
-	
 
+		 System.out.println(countMinMoves(arr,10));
+
+
+	}
+	
+	
+	
+	
+	public static int countMinMoves(int[] arr,int stairs)
+	{
+		
+		
+		int index = arr.length-1;
+		
+		
+		
+		return recurse(index,arr,stairs);
+		
+		
+		
+		
+	}
+
+
+
+
+	private static int recurse(int index, int[] arr, int stairs) {
+
+		if(stairs<=0)
+			return 0;
+		
+		
+		
+		if(index==0)
+		{
+			if(stairs==arr[0])
+				return 1;
+			else
+				return 0;
+		}
+		
+		
+		
+		int takeMove = 1 + recurse(index-1, arr, stairs-arr[index]);
+			
+		int NottakeMove =  recurse(index-1, arr, stairs);
+		
+		
+		// TODO Auto-generated method stub
+		return Math.min(takeMove, NottakeMove);
 	}
 
 }
